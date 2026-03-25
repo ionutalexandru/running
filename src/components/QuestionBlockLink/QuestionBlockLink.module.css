@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.container {
+  display: inline-flex;
+  flex-direction: row; 
+  align-items: flex-end;
+  gap: 0;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  position: relative;
+  perspective: 1000px;
+  overflow: visible;
+  transition: transform 0.1s ease-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.container:active {
+  transform: scale(1.02) translateY(-6px);
+  transition: transform 0.08s ease-in;
+}
+
+.questionBlock {
+  width: 60px;
+  height: 60px;
+  background-color: #fbd000;
+  border: 4px solid #9d5a00;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 0 #9d5a00;
+  z-index: 10;
+  border-right-width: 2px; 
+}
+
+.questionMark {
+  color: white; font-size: 40px; font-weight: bold; font-family: 'Georgia', serif; 
+  text-shadow: 3px 3px 0 #9d5a00; user-select: none; z-index: 2;
+}
+.rivet1, .rivet2, .rivet3, .rivet4 {
+  position: absolute; width: 8px; height: 8px; background-color: #9d5a00; border-radius: 50%; z-index: 3;
+}
+.rivet1 { top: 8px; left: 8px; } .rivet2 { top: 8px; right: 8px; }
+.rivet3 { bottom: 8px; left: 8px; } .rivet4 { bottom: 8px; right: 8px; }
+
+
+.container::before, .container::after {
+  content: ''; position: absolute; top: -10px; left: 30px;
+  width: 28px; height: 28px; background-color: #ffcc00; border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(255, 255, 255, 0.5);
+  opacity: 0; transform: translate(-50%, 0) scale(0); z-index: 5;
+  animation: none;
+}
+.container:hover::before { animation: popCoin1 0.8s ease-out forwards; }
+.container:hover::after { animation: popCoin2 0.8s ease-out 0.15s forwards; }
+
+@keyframes popCoin1 {
+  0% { opacity: 0; transform: translate(-50%, 0) scale(0.5) rotateY(0deg); }
+  20% { opacity: 1; transform: translate(-50%, -70px) scale(1) rotateY(360deg); }
+  100% { opacity: 0; transform: translate(-50%, -100px) scale(0.7) rotateY(720deg); }
+}
+@keyframes popCoin2 {
+  0% { opacity: 0; transform: translate(-50%, 0) scale(0.5) rotateY(0deg); }
+  25% { opacity: 1; transform: translate(-70%, -80px) scale(1) rotateY(-360deg); }
+  100% { opacity: 0; transform: translate(-90%, -120px) scale(0.7) rotateY(-720deg); }
+}
+
+.brickPlatform {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c2580c;
+  border: 4px solid #7f2500;
+  border-left: 2px solid #7f2500;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 6px 0 #7f2500;
+
+  background-image: 
+    repeating-linear-gradient(to right, transparent 0, transparent 58px, #7f2500 58px, #7f2500 60px),
+    repeating-linear-gradient(to right, transparent 0, transparent 28px, #7f2500 28px, #7f2500 30px),
+    linear-gradient(to bottom, transparent 28px, #7f2500 28px, #7f2500 30px, transparent 30px);
+  background-size: 60px 60px, 60px 60px, 100% 60px;
+  background-position: 30px 0, 0px 30px, 0 0;
+}
+
+.label {
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: -2px -2px 0 #333, 2px -2px 0 #333, -2px 2px 0 #333, 2px 2px 0 #333;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.container:hover .label {
+  color: #fbd000;
+  text-shadow: -2px -2px 0 #9d5a00, 2px -2px 0 #9d5a00, -2px 2px 0 #9d5a00, 2px 2px 0 #9d5a00;
+}
+
+.container.disabled {
+  filter: grayscale(90%);
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none; 
+}
+
+
+.container:not(.disabled):hover {
+  transform: scale(1.05);
+}
+
+.container:not(.disabled):active {
+  transform: scale(1.02) translateY(-6px);
+  transition: transform 0.08s ease-in;
+}
+
+.container:not(.disabled):hover::before {
+  animation: popCoin1 0.8s ease-out forwards;
+}
+
+.container:not(.disabled):hover::after {
+  animation: popCoin2 0.8s ease-out 0.15s forwards;
+}
+
+.container:not(.disabled):hover .label {
+  color: #fbd000;
+  text-shadow: -2px -2px 0 #9d5a00, 2px -2px 0 #9d5a00, -2px 2px 0 #9d5a00, 2px 2px 0 #9d5a00;
+}

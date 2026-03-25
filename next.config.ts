@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/2016(/?)',
-        destination: '/2016/muc-marathon/',
+        source: '/2025(/?)',
+        destination: '/2025/muc-marathon/',
         permanent: false,
       }
     ]

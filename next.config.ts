@@ -1,4 +1,5 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -7,9 +8,10 @@ const nextConfig: NextConfig = {
         source: '/2025(/?)',
         destination: '/2025/muc-marathon/',
         permanent: false,
-      }
-    ]
-  }
+      },
+    ];
+  },
 };
+const withNextIntl = createNextIntlPlugin();
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

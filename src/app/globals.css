@@ -1,26 +1,66 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 1. Definición del Tema en Tailwind v4 */
+@theme {
+  --color-background-light: #f9fafb;
+  --color-foreground-light: #111827;
+  --color-background-dark: #030712;
+  --color-foreground-dark: #f9fafb;
+  --color-border-subtle: hsl(214.3 31.8% 91.4%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* 2. Variables Base y Modo Oscuro */
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-color: var(--color-background-light);
+    --text-color: var(--color-foreground-light);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: var(--color-background-dark);
+      --text-color: var(--color-foreground-dark);
+    }
+  }
+
+  * {
+    border-color: var(--color-border-subtle);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 3. Utilidades Personalizadas (Scrollbar) */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* 4. LEAFLET OVERRIDES (CSS Puro para evitar conflictos de @apply en v4) */
+.grayscale-map .leaflet-tile-container {
+  filter: grayscale(100%) invert(5%) sepia(5%) brightness(95%) contrast(90%);
+}
+
+.leaflet-container {
+  outline: 0 !important;
+  background-color: #f3f4f6 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem !important;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+  border: 1px solid #f3f4f6 !important;
 }

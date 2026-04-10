@@ -10,7 +10,7 @@ import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = { title: 'Run Tracker' };
+export const metadata: Metadata = { title: 'Run with Ionuț-Alexandru' };
 
 type Props = {
   children: React.ReactNode;

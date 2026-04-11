@@ -25,10 +25,10 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex h-screen flex-col`}>
         <NextIntlClientProvider>
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main className="relative h-screen w-full overflow-hidden">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

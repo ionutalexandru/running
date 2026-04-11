@@ -1,11 +1,15 @@
+import './page.css';
 import Map from '@/components/Map';
+import MarioButton from '@/components/ui/MarioButton';
 
 export default function Dashboard() {
   return (
-    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 md:grid-cols-[1fr,320px]">
-      <div className="relative">
-        <Map />
+    <>
+      <Map />
+      <div className="absolute bottom-0 flex w-full justify-center gap-4 border-t-4 border-black bg-[#8B4513] p-4">
+        <MarioButton label="Live" color="yellow" href="/live" />
+        <MarioButton label="Spotify" color="green" href="/2026/spotify" />
       </div>
-    </div>
+    </>
   );
 }

@@ -1,13 +1,28 @@
-import Link from 'next/link';
+import { Coins, SportShoe, Snail } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-2xl font-semibold tracking-tight text-gray-900">
-          Run with Ionuț-Alexandru
-        </Link>
-      </nav>
-    </header>
+    <div className="absolute top-0 z-10 flex w-full items-center justify-evenly border-b-4 border-black bg-blue-600 p-4 font-bold text-white">
+      <div className="flex items-center gap-2">
+        <Coins /> 70
+      </div>
+
+      <div>
+        <SportShoe /> 566.1 km
+      </div>
+
+      <div>
+        <Snail /> 4&#39;37&#39;&#39;/km
+      </div>
+
+      <div className="d-flex flex-col">
+        <div className="rounded border-2 border-black bg-yellow-400 px-3 py-1 text-black">
+          LVL 2026
+        </div>
+        <span>
+          <i>2026 Data (Updated: Apr 10)</i>
+        </span>
+      </div>
+    </div>
   );
 }

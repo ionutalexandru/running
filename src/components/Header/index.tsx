@@ -2,8 +2,8 @@ import { Coins, SportShoe, Snail } from 'lucide-react';
 
 export default function Header() {
   return (
-    <div className="absolute top-0 z-10 flex w-full items-center justify-evenly border-b-4 border-black bg-blue-600 p-4 font-bold text-white">
-      <div className="flex items-center gap-2">
+    <div className="flex items-center justify-around border-b-4 border-black bg-blue-600/90 px-3 py-2 text-xs font-bold text-white backdrop-blur md:text-sm">
+      <div className="hidden sm:flex sm:items-center">
         <Coins /> 70
       </div>
 

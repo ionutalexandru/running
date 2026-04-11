@@ -1,15 +1,21 @@
 @import 'tailwindcss';
 
+html,
 body {
-  background: #00b09b;
-  background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
-  background: linear-gradient(to right, #96c93d, #00b09b);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* 1. Tinte Cyberpunk para el mapa */
 /* Convertimos los grises neutros de CartoDB en un azul/cian profundo y oscuro */
 .grayscale-map .leaflet-tile-container {
   filter: sepia(100%) hue-rotate(180deg) saturate(200%) brightness(60%) contrast(120%);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
 }
 
 /* Fondo para evitar destellos blancos al cargar */

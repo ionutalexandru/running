@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 import '@/app/globals.css';
-import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,8 +26,7 @@ export default async function RootLayout({ children, params }: Props) {
     <html>
       <body className={`${inter.className} flex h-screen flex-col`}>
         <NextIntlClientProvider>
-          <Header />
-          <main className="relative h-screen w-full overflow-hidden">{children}</main>
+          <main className="h-[100dvh] w-full overflow-hidden bg-sky-400">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

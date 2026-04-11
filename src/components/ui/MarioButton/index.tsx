@@ -15,7 +15,7 @@ export default function MarioButton({ label, color, href }: Props) {
   return (
     <a
       href={href}
-      className={`rounded-lg border-4 border-black px-5 py-3 font-bold text-white ${colors[color]} shadow-[0_6px_0_#000] transition-all active:translate-y-[4px] active:shadow-[0_2px_0_#000]`}
+      className={`flex-1 rounded-md border-4 border-black px-2 py-2 text-[10px] font-bold text-white sm:text-xs md:text-sm ${colors[color]} shadow-[0_4px_0_#000] transition-all active:translate-y-[2px] active:shadow-[0_2px_0_#000]`}
     >
       {label}
     </a>

@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 
-/* 1. Definición del Tema en Tailwind v4 */
 @theme {
   --color-background-light: #f9fafb;
   --color-foreground-light: #111827;

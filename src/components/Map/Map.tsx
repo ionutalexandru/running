@@ -35,7 +35,7 @@ function MapPins() {
   return (
     <>
       {runs.map((run) => (
-        <Marker key={run.city} position={run.coords} icon={marioMushroomIcon}>
+        <Marker key={run.city} position={run.coords as [number, number]} icon={marioMushroomIcon}>
           <Popup>
             <div className="font-bold">
               {run.city} <br />

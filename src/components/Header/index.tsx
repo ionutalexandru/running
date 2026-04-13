@@ -8,11 +8,11 @@ export default function Header() {
       </div>
 
       <div>
-        <SportShoe /> 587.2 km
+        <SportShoe /> 598.3 km
       </div>
 
       <div>
-        <Snail /> 4&#39;39&#39;&#39;/km
+        <Snail /> 4&#38;39&#39;&#39;/km
       </div>
 
       <div className="d-flex flex-col">
@@ -20,7 +20,7 @@ export default function Header() {
           LVL 2026
         </div>
         <span>
-          <i>2026 Data (Updated: Apr 11)</i>
+          <i>2026 Data (Updated: Apr 13)</i>
         </span>
       </div>
     </div>

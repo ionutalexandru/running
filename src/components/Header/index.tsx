@@ -12,7 +12,7 @@ export default function Header() {
       </div>
 
       <div>
-        <Snail /> 4&#38;39&#39;&#39;/km
+        <Snail /> 4&#39;38&#39;&#39;/km
       </div>
 
       <div className="d-flex flex-col">

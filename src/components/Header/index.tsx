@@ -4,15 +4,15 @@ export default function Header() {
   return (
     <div className="flex items-center justify-around border-b-4 border-black bg-blue-600/90 px-3 py-2 text-xs font-bold text-white backdrop-blur md:text-sm">
       <div className="hidden sm:flex sm:items-center">
-        <Coins /> 70
+        <Coins /> 76
       </div>
 
       <div>
-        <SportShoe /> 598.3 km
+        <SportShoe /> 525.2 km
       </div>
 
       <div>
-        <Snail /> 4&#39;38&#39;&#39;/km
+        <Snail /> 4&#39;39&#39;&#39;/km
       </div>
 
       <div className="d-flex flex-col">
@@ -20,7 +20,7 @@ export default function Header() {
           LVL 2026
         </div>
         <span>
-          <i>2026 Data (Updated: Apr 13)</i>
+          <i>2026 Data (Updated: Apr 17)</i>
         </span>
       </div>
     </div>

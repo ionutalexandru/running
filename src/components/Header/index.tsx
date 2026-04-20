@@ -4,11 +4,11 @@ export default function Header() {
   return (
     <div className="flex items-center justify-around border-b-4 border-black bg-blue-600/90 px-3 py-2 text-xs font-bold text-white backdrop-blur md:text-sm">
       <div className="hidden sm:flex sm:items-center">
-        <Coins /> 76
+        <Coins /> 77
       </div>
 
       <div>
-        <SportShoe /> 525.2 km
+        <SportShoe /> 637.9 km
       </div>
 
       <div>
@@ -20,7 +20,7 @@ export default function Header() {
           LVL 2026
         </div>
         <span>
-          <i>2026 Data (Updated: Apr 17)</i>
+          <i>2026 Data (Updated: Apr 20)</i>
         </span>
       </div>
     </div>

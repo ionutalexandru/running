@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/live(/?)',
-        destination: 'https://www.nike.com/nrc/s/session/63b6f12b-119d-4611-8fc8-1deec22cc765',
+        destination: '/',
         permanent: false,
       },
     ];

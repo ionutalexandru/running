@@ -20,7 +20,7 @@ export default function Header() {
           LVL 2026
         </div>
         <span>
-          <i>2026 Data (Updated: May 11)</i>
+          <i>2026 Data (Updated: May 27)</i>
         </span>
       </div>
     </div>

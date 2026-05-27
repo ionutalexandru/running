@@ -4,11 +4,11 @@ export default function Header() {
   return (
     <div className="flex items-center justify-around border-b-4 border-black bg-blue-600/90 px-3 py-2 text-xs font-bold text-white backdrop-blur md:text-sm">
       <div className="hidden sm:flex sm:items-center">
-        <Coins /> 89
+        <Coins /> 98
       </div>
 
       <div>
-        <SportShoe /> 747.7 km
+        <SportShoe /> 821.9 km
       </div>
 
       <div>

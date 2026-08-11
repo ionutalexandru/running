@@ -8,7 +8,7 @@ export default function Header() {
       </div>
 
       <div>
-        <SportShoe /> 1173
+        <SportShoe /> 1173km
       </div>
 
       <div>
